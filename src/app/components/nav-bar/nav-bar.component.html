@@ -1,0 +1,18 @@
+<div class="navigation">
+    <ul>
+        <li><a routerLink="/a">a</a></li>
+        <li><a routerLink="/b">b</a></li>
+        <li><a routerLink="/c">c</a></li>
+    
+        <li>
+            <button (click)="navigation.goBack()">Back to {{navigation.getPreviousUrl()}} </button>
+        </li>
+    </ul>
+      
+</div>
+
+<h3>History</h3>
+
+<span *ngFor="let url of navigation.getHistory(); let i = index">    
+    {{i}}={{url}}  
+</span>

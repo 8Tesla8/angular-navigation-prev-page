@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavigationService } from './service/navigation.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-project';
+
+  constructor(public navigation: NavigationService) {
+    this.navigation.startSaveHistory();
+  }
 }

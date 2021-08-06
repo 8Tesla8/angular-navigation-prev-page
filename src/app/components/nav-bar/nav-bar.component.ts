@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { NavigationService } from 'src/app/service/navigation.service';
 
 @Component({
@@ -6,11 +6,6 @@ import { NavigationService } from 'src/app/service/navigation.service';
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.scss']
 })
-export class NavBarComponent implements OnInit {
-
+export class NavBarComponent {
   constructor(public navigation: NavigationService) { }
-
-  ngOnInit() {
-  }
-
 }
